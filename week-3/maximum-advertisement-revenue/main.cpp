@@ -35,4 +35,6 @@ int main()
     }
 
     std::cout << max_dot_product(a, b) << std::endl;
+
+    return 0;
 }
