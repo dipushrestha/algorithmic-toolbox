@@ -6,9 +6,9 @@ int binary_search(const std::vector<int> &a, int x)
 {
     int left = 0, right = (int)a.size() - 1;
 
-    while (right >= left)
+    while (left <= right)
     {
-        int mid = a[left] + (right - left) / 2 - 1;
+        int mid = left + (right - left) / 2;
 
         if (x == a[mid])
             return mid;
@@ -18,8 +18,6 @@ int binary_search(const std::vector<int> &a, int x)
 
         else
             left = mid + 1;
-
-        //std::cout << "Mid: " << mid << ", " << a[mid] << " Left: " << left << " Right: " << right << std::endl;
     }
 
     return -1;
